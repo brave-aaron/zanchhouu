@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Servium</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+                        <link rel="icon" type="image/png" href="logo 1.png" />
+
+</head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+        <div class="container header-container">
+            <!-- Menu Burger -->
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="index.html">
+                <img src="logo 1.png" alt="Logo Servium" class="logo" />
+            </a>
+
+
+
+            <!-- Menu de navigation -->
+            <nav id="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="reservation.html">Réservations</a></li>
+                    <li><a href="publication.html">Publication&Actualités</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="#">FR</a> / <a href="#">EN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ <section class="intro">
+    <div class="container">
+      <h1>Contactez-nous</h1>
+      <p>Une question ? Besoin d’assistance ou d’un devis personnalisé ? L’équipe de Servium est à votre écoute !</p>
+
+      <div class="contact-grid">
+        <!-- Formulaire -->
+        <form class="contact-form" action="#" method="POST">
+          <input type="text" name="nom" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre email" required>
+          <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+          <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+          <button type="submit">Envoyer le message</button>
+        </form>
+
+        <!-- Infos de contact -->
+        <div class="contact-infos">
+          <h2>Nos coordonnées</h2>
+          <p><strong>Email :</strong> contact@servium.tg</p>
+          <p><strong>Téléphone :</strong> +228 71 63 59 64</p>
+          <p><strong>Adresse :</strong> Lomé, Togo</p>
+          <p>Suivez-nous :</p>
+          <div class="socials">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <img src="logo 1.png" class="footer-logo" alt="Logo Servium" />
+      <p>Email : <a href="mailto:contact@servium.com">contact@servium.com</a></p>
+      <div class="socials">
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+      </div>
+      <p>&copy; 2025 SERVIUM - Tous droits réservés</p>
+    </div>
+  </footer>
+        <script src="" async defer></script>
+        <script>
+  // Obtenir le fichier actuel sans les paramètres
+  const currentPage = window.location.pathname.split("/").pop().split("?")[0];
+
+  // Sélection de tous les liens dans la navigation
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute("href");
+
+    if (linkHref === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+</script>
+<script>
+  const burger = document.getElementById("burger");
+  const nav = document.querySelector("nav");
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+    </body>
+</html>

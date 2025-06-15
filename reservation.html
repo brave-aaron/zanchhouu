@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Servium</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo 1.png" />
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+        <div class="container header-container">
+            <!-- Menu Burger -->
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="index.html">
+                <img src="logo 1.png" alt="Logo Servium" class="logo" />
+            </a>
+
+
+
+            <!-- Menu de navigation -->
+            <nav id="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="reservation.html" class="active">Réservations</a></li>
+                    <li><a href="publication.html">Publication&Actualités</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">FR</a> / <a href="#">EN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Section Réservation -->
+    <section class="reservation-section">
+        <div class="container">
+            <h1>Réservez votre prochaine aventure</h1>
+            <p class="subtext">Chez <strong>Servium</strong>, nous transformons vos projets de voyage en réalité.
+                Veuillez remplir le formulaire ci-dessous pour débuter votre aventure.</p>
+
+            <form action="reservation.php" method="POST" class="reservation-form">
+                <input type="text" name="nom" placeholder="Votre nom complet" required>
+                <input type="email" name="email" placeholder="Votre adresse email" required>
+                <input type="tel" name="telephone" placeholder="Votre numéro de téléphone" required>
+                <input type="text" name="nom" placeholder="pays de résidence(pays de départ)" required>
+                <input type="text" name="nom" placeholder="pays d'accueil(pays d'arrivé)" required>
+
+
+
+
+
+
+                <!-- Type de ticket ajouté -->
+                <label for="type_ticket">Type de ticket :</label>
+                <select name="type_ticket" id="type_ticket" required>
+                    <option value="" disabled selected>Type de ticket</option>
+                    <option value="aller_simple">Aller simple</option>
+                    <option value="aller_retour">Aller-retour</option>
+                    <option value="multi_destinations">Multi-destinations</option>
+                </select>
+                <label for="type_ticket">moyen de transports :</label>
+                <select name="type_ticket" id="type_ticket" required>
+                    <option value="" disabled selected>moyen de transports</option>
+                    <option value="AVION">AVION</option>
+                    <option value="BUS">BUS</option>
+                    <option value="BATEAU">BATEAU</option>
+                </select>
+
+                <label for="date_depart">Date de départ :</label>
+                <input type="date" name="date_depart" id="date_depart" required>
+
+                <textarea name="message" rows="5" placeholder="Message ou besoin particulier (facultatif)"></textarea>
+                <input type="submit" value="Réserver maintenant">
+            </form>
+        </div>
+    </section>
+
+    <!-- Section Appel à l'action -->
+    <section class="cta">
+        <div class="container">
+            <h2>PRÊT À VOYAGER AVEC NOUS ?</h2>
+            <p>Contactez notre équipe dès aujourd’hui et planifiez votre prochaine aventure en toute sérénité avec
+                Servium.
+            </p>
+            <a href="contact.html" class="btn">Contactez-nous</a>
+        </div>
+    </section>
+
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <img src="logo 1.png" class="footer-logo" alt="Logo Servium" />
+            <p>Email : <a href="mailto:contact@servium.com">contact@servium.com</a></p>
+            <div class="socials">
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 SERVIUM - Tous droits réservés</p>
+        </div>
+    </footer>
+    <script src="" async defer></script>
+    <script>
+        // Obtenir le fichier actuel sans les paramètres
+        const currentPage = window.location.pathname.split("/").pop().split("?")[0];
+
+        // Sélection de tous les liens dans la navigation
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        navLinks.forEach(link => {
+            const linkHref = link.getAttribute("href");
+
+            if (linkHref === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    </script>
+    <script>
+        const burger = document.getElementById("burger");
+        const nav = document.querySelector("nav");
+
+        burger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
