@@ -145,7 +145,7 @@ footer a:hover {
 }
 
 .BILLETERIE {
-    background-image: url(../images/billet.jpg);
+    background-image: url(billet.jpg);
     background-size: cover;
     padding: 150px 0px;
     width: 100%;
@@ -153,7 +153,7 @@ footer a:hover {
 }
 
 .HEBERGEMENT {
-    background-image: url(../images/img.webp);
+    background-image: url(img.webp);
     background-size: cover;
     padding: 150px 0px;
     width: 100%;
@@ -161,7 +161,7 @@ footer a:hover {
 }
 
 .LOISIRS {
-    background-image: url(../images/bali_files/Best-Province-Lombok-1.jpg);
+    background-image: url(loisir.webp);
     background-size: cover;
     padding: 150px 0px;
     width: 100%;
@@ -169,7 +169,7 @@ footer a:hover {
 }
 
 .VISA {
-    background-image: url(../images/BACK\ VISA.jpg);
+    background-image: url(BACK\ VISA.jpg);
     background-size: cover;
     padding: 150px 0px;
     width: 100%;
